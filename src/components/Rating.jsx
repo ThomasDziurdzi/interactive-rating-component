@@ -1,4 +1,5 @@
 import "./Rating.css";
+import PropTypes from "prop-types";
 import star from "/icon-star.svg";
 
 function Rating({ selectedRating, handleRatingClick, handleSubmit }) {
@@ -34,5 +35,11 @@ function Rating({ selectedRating, handleRatingClick, handleSubmit }) {
         </div>
     );
 }
+
+Rating.propTypes = {
+    selectedRating: PropTypes.number.isRequired,
+    handleRatingClick: PropTypes.func.isRequired,
+    handleSubmit: PropTypes.func.isRequired,
+};
 
 export default Rating;

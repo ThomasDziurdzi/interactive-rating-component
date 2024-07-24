@@ -1,4 +1,5 @@
 import "./Note.css";
+import PropTypes from "prop-types";
 import illustration from "/illustration-thank-you.svg"
 
 function Note({selectedRating}) {
@@ -12,6 +13,10 @@ function Note({selectedRating}) {
         <p className="note__thanks">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
        </div>
     );
+}
+
+Note.propTypes = {
+    selectedRating: PropTypes.number.isRequired,
 }
 
 export default Note;
